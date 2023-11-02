@@ -5,7 +5,8 @@
 ![a](picture/myERD.png)
 저번에 작성한 것이다. 
 
-
+각각에 미션에 대해 작성했다.
+![a](picture/mission1.png)
 p1.
 // 진행중 
 SELECT 
@@ -31,6 +32,7 @@ ON
 WHERE mymission.doing_done=true
 limit 10 offset(n-1)*10;
 
+![a](picture/mission2.png)
 p2.
 //가게에 대한 리뷰
 SELECT
@@ -45,9 +47,8 @@ ON
 
 
 
-
+![a](picture/mission3.png)
 p3.
-
 //내가 모은 미션 수
 SELECT
  member.mission_count
@@ -63,7 +64,7 @@ LEFT JOIN mymission
 ON mymission.mission_id = mission.id and mymission.doing_done = true
 WHERE mymission.key is null;
 
-
+![a](picture/mission4.png)
 p4.
 SELECT
   memver.*, review.title, review.body
