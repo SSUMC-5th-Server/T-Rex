@@ -10,15 +10,15 @@
 
 이후 key를 가져온다
 
-Post /api/...
+Post /member/singin
 requestBody
 {
-    "name" = "이우혁",
-    "gender"= "1",
-    "birthDay" = "20010419",
-    "favor" = ["한식", "도시락"],
-    "region_address" = "인천",
-    "spec_address"= "남동구 구월로 192"
+    "name" : "이우혁",
+    "gender" : "1",
+    "birthDay" : "20010419",
+    "favor" : ["한식", "도시락"],
+    "region_address" : "인천",
+    "spec_address" : "남동구 구월로 192"
 }
 resposeBody
 {
@@ -39,18 +39,18 @@ resposeBody
     포인트
 )
 
-Get /api/...
+Get /home/
 responseBody
 {
-    "region_address"="인천",
-    "mission_count"="7",
-    "mission" = [
+    "region_address":"인천",
+    "mission_count":"7",
+    "mission" : [
 		{
 			"mission_id" : "1"
 			"shop_name" : "반이학생마라탕"
 			"deadline" : "20231212"
 			"mission_how_success" : "10,000원 이상의 식사"
-            "food_type"="중식당"
+            "food_type":"중식당"
 			"point" : "500"
 		},
 		{
@@ -58,7 +58,7 @@ responseBody
 			"shop_name" : "반이학생마라탕"
 			"deadline" : "20231212"
 			"mission_how_success" : "10,000원 이상의 식사"
-            "food_type"="중식당"
+            "food_type":"중식당"
 			"point" : "500"
 		}
 	]
@@ -75,8 +75,24 @@ responseBody
     미션 성공시 보상 - 5%적립,
     미션이 달성되는 조건
 )
-
 이후 사장님 구분 번호를 가져온다
+
+
+requestBody
+{
+    "member_id" = "1",
+    "mission_id" = "1",
+    "mission_doing_done" = "true"
+}
+
+responseBody
+{
+    "code":"920394810"
+}
+
+
+
+
 
 ![a](picture/미션목록조회(진행중,%20진행완료).png)
 4. 미션 목록 조회
@@ -102,7 +118,8 @@ responseBody
 			"shop_name" : "반이학생마라탕"
 			"deadline" : "20231212"
 			"mission_how_success" : "10,000원 이상의 식사"
-            "food_type"="중식당"
+            "mission_reward":"5%할인"
+            "food_type":"중식당"
 			"point" : "500"
 		},
 		{
@@ -110,7 +127,7 @@ responseBody
 			"shop_name" : "반이학생마라탕"
 			"deadline" : "20231212"
 			"mission_how_success" : "10,000원 이상의 식사"
-            "food_type"="중식당"
+            "food_type":"중식당"
 			"point" : "500"
 		}
 	]
@@ -127,18 +144,18 @@ responseBody
 
 responseBody
 {
-    "member_point" = "500"
-    "mymission" = [
+    "member_point" : "500"
+    "mymission" : [
         {
 			"mission_id" : "1"
 			"shop_name" : "반이학생마라탕"
-            "food_type"="중식당"
+            "food_type":"중식당"
 			"point" : "500"
 		},
 		{
 			"mission_id" : "2"
 			"shop_name" : "반이학생마라탕"
-            "food_type"="중식당"
+            "food_type":"중식당"
 			"point" : "500"
 		}
     ]
