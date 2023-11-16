@@ -39,7 +39,7 @@ resposeBody
     포인트
 )
 
-Get /home/
+Get /home/homepage
 responseBody
 {
     "region_address":"인천",
@@ -78,6 +78,7 @@ responseBody
 이후 사장님 구분 번호를 가져온다
 
 
+Patch /mission/success/{id}
 requestBody
 {
     "member_id" = "1",
@@ -109,6 +110,8 @@ responseBody
     미션 성공시 보상 - 5%적립,
     미션이 달성되는 조건
 )
+
+Get /mission/{id}
 
 responseBody
 {
@@ -167,6 +170,7 @@ responseBody
 별점
 리뷰내용
 
+Get /review/
 requestBody
 {
     "review_id" : "1"
